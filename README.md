@@ -10,4 +10,4 @@ Developed in Python and powered by Google Cloud.
 
 ## Screenshots
 
-![Screenshot 1](screenshot.png)
+![Screenshot 1](screenshot_1.png)
