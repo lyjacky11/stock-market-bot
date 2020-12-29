@@ -6,6 +6,9 @@ import json
 # Variables
 TOKEN="[INSERT DISCORD BOT TOKEN]"
 API_URL="https://query2.finance.yahoo.com/v7/finance/quote?symbols="
+TRADING_VIEW="https://www.tradingview.com/symbols/"
+TVIEW_ICON="https://s3.tradingview.com/userpics/6171439-LZyQ_big.png"
+YAHOO_QUOTE="https://ca.finance.yahoo.com/quote/"
 
 # Command names
 prefix = "$"
@@ -35,7 +38,8 @@ def get_stocks(stock_symbol):
 				display_name = stock["displayName"]
 			else:
 				display_name = short_name
-			embed=discord.Embed(title="{} ({})".format(display_name, symbol), description=short_name, color=0x0080ff)
+			embed=discord.Embed(title="{} ({})".format(display_name, symbol), url="{}{}".format(YAHOO_QUOTE, symbol), description=short_name, color=0x0080ff)
+			embed.set_author(name="TradingView", url="{}{}".format(TRADING_VIEW, symbol), icon_url=TVIEW_ICON)
 			embed.set_thumbnail(url="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/chart-increasing_1f4c8.png")
 
 			# Market price
