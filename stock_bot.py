@@ -129,7 +129,7 @@ async def on_message(message):
 	
 	# Invalid commands
 	elif msgContent.startswith(prefix):
-		await msgChannel.send("Invalid stock bot command!\nPrefix is: `{}`".format(prefix))
+		await msgChannel.send("Invalid stock bot command!\nCommands List: `{}`".format(helpCmd))
 	
 	# Other messages
 	else:
