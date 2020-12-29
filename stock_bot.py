@@ -37,7 +37,7 @@ def get_stocks(stock_symbol):
 			
 			# Market price
 			market_price = "%0.2f" % stock["regularMarketPrice"]
-			currency = stock["financialCurrency"]
+			currency = stock["currency"]
 			embed.add_field(name="Market Price:", value="${} {}".format(market_price, currency), inline=False)		
 			
 			# Market change
