@@ -65,7 +65,7 @@ def get_stocks(stock_symbol):
 		# Invalid symbol
 		else:
 			embed=discord.Embed(title="Symbol: {}".format(stock_symbol), color=0x0080ff)
-			embed.add_field(name="{} was not found!".format(stock_symbol), value="Is {} a valid stock symbol?".format(stock_symbol), inline=False)
+			embed.add_field(name="{} was not found!".format(stock_symbol), value="Please try a different symbol!", inline=False)
 			embed_list.append(embed)
 
 	return embed_list
